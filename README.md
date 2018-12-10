@@ -1,27 +1,15 @@
-# AngularMaterialApp
+# Angular-Material-App
+
+This integrates Google's Material Design into an Angular 7 app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.  
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Notes
 
-## Code scaffolding
+A Gary Simon tutorial was followed (based on Angular 4) but the app.module.ts, app.component,ts and app.component.html required changes due to changes in Angular 7. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Materials modules begin with 'mat' and not 'md'; md has been deprecated.  
+The map function/Angular module (and related pipe function) were not required. The data defaults to json format and a simpler code worked. Functionality added, but could be improved to show more complex API data together with more menu options.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Link to: [original Angular 4 Material Tutorial by Gary Simon](https://coursetro.com/posts/code/67/Angular-4-Material-Tutorial).
