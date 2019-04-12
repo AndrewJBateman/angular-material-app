@@ -1,7 +1,7 @@
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/prebuilt-themes/purple-green.css';
 
 body {
-    padding: 2em 23em;
+    padding: 2em 15em;
     background:lightgray;
 }
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-//import { map } from "rxjs/operators";
+// import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-root',
@@ -11,8 +11,8 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   myData: any;
 
-  constructor(private http:HttpClient) {
-    
+  constructor(private http: HttpClient) {
+
     this.http.get('https://jsonplaceholder.typicode.com/photos')
       .subscribe(
         data => {
@@ -20,7 +20,7 @@ export class AppComponent {
           console.log(data);
         },
         error => {
-          alert("ERROR");
+          alert('ERROR');
         });
   }
 }
