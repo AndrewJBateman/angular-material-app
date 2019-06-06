@@ -1,6 +1,6 @@
 # Angular Material App
 
-This app integrates Google's Material Design into an Angular 7 app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.  
+This app integrates Google's Material Design into an Angular 8 app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.  
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -17,7 +17,7 @@ This app integrates Google's Material Design into an Angular 7 app. It displays 
 
 ## General info
 
-* A Gary Simon tutorial was followed (based on Angular 4) but the app.module.ts, app.component,ts and app.component.html required changes due to changes in Angular 7.
+* A Gary Simon tutorial was followed (based on Angular 4) but the app.module.ts, app.component.ts and app.component.html required changes due to changes in Angular 7/8.
 
 * Materials modules begin with 'mat' and not 'md'; md has been deprecated.  
 
@@ -32,11 +32,13 @@ This app integrates Google's Material Design into an Angular 7 app. It displays 
 
 ## Technologies
 
-* [Angular v7.0.0](https://angular.io/) & [Angular CLI v7.3.8](https://cli.angular.io/).
+* [Angular v8.0.0](https://angular.io/)
 
-* [RxJS Library v6.4.0](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
+* [Angular CLI v8.0.1](https://cli.angular.io/).
 
-* [Angular Material v7.3.7](https://material.angular.io/).
+* [RxJS Library v6.5.2](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
+
+* [Angular Material v8.0.0](https://material.angular.io/).
 
 ## Setup
 
@@ -80,7 +82,7 @@ export class AppComponent {
 
 ## Status & To-Do List
 
-* Status: Simple working app.
+* Status: Working.
 
 * To-Do: add functionality.
 
@@ -90,4 +92,4 @@ export class AppComponent {
 
 ## Contact
 
-Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
