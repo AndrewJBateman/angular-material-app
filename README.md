@@ -1,6 +1,6 @@
 # Angular Material App
 
-This app integrates Google's Material Design into an Angular 8 app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.  
+This app integrates Google's Material Design into an Angular 9 app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.  
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -17,12 +17,9 @@ This app integrates Google's Material Design into an Angular 8 app. It displays 
 
 ## General info
 
-* A Gary Simon tutorial was followed (based on Angular 4) but the app.module.ts, app.component.ts and app.component.html required changes due to changes in Angular 7/8.
-
+* A Gary Simon tutorial was followed (based on Angular 4) but the app.module.ts, app.component.ts and app.component.html required changes due to changes in Angular 7/8. Update to Angular 9 did not need any chhanges to the code.
 * Materials modules begin with 'mat' and not 'md'; md has been deprecated.  
-
 * The map function/Angular module (and related pipe function) were not required. The data defaults to json format and a simpler code worked.
-
 * [A jsonplaceholder API](https://jsonplaceholder.typicode.com/photos) was used to provide dummy json data for the app.
 
 ## Screenshots
@@ -33,11 +30,8 @@ This app integrates Google's Material Design into an Angular 8 app. It displays 
 ## Technologies
 
 * [Angular v8.0.0](https://angular.io/)
-
 * [Angular CLI v8.0.1](https://cli.angular.io/).
-
 * [RxJS Library v6.5.2](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
-
 * [Angular Material v8.0.0](https://material.angular.io/).
 
 ## Setup
@@ -78,12 +72,12 @@ export class AppComponent {
 
 ## Features
 
-* angular materials cards used to show api data.
+* Angular Material cards used to show api data.
+* Updated to use latest Angular 9.
 
 ## Status & To-Do List
 
 * Status: Working.
-
 * To-Do: add functionality.
 
 ## Inspiration
