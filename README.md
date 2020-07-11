@@ -1,95 +1,86 @@
-# Angular Material App
+# :zap: Angular Material App
 
-This app integrates Google's Material Design into an Angular 9 app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.
+This app integrates Google's Material Design into an Angular 10 app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
-## Table of contents
+## :page_facing_up: Table of contents
 
-* [Angular Material App](#angular-material-app)
-  * [Table of contents](#table-of-contents)
-  * [General info](#general-info)
-  * [Screenshots](#screenshots)
-  * [Technologies](#technologies)
-  * [Setup](#setup)
-  * [Code Examples](#code-examples)
-  * [Features](#features)
-  * [Status & To-Do List](#status--to-do-list)
-  * [Inspiration](#inspiration)
-  * [Contact](#contact)
+* [:zap: Angular Material App](#zap-angular-material-app)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:envelope: Contact](#envelope-contact)
 
-## General info
+## :books: General info
 
-* A Gary Simon tutorial was followed (based on Angular 4) but the app.module.ts, app.component.ts and app.component.html required changes due to changes in Angular 7/8. Update to Angular 9 did not need any chhanges to the code.
+* A Gary Simon tutorial was followed (based on Angular 4) but the app.module.ts, app.component.ts and app.component.html required changes due to changes in Angular 7/8.
+* Updated to Angular 10 and http request moved to its own service file.
 * Materials modules begin with 'mat' and not 'md'; md has been deprecated.
-* The map function/Angular module (and related pipe function) were not required. The data defaults to json format and a simpler code worked.
+* rxjs pipe - map - filter used to limit http response to 10 items using item id - max 5000 items available which takes a while to download.
 * [A jsonplaceholder API](https://jsonplaceholder.typicode.com/photos) was used to provide dummy json data for the app.
 
-## Screenshots
+## :camera: Screenshots
 
-![Example screenshot](./img/angular-mat-cards.png).
+![Example screenshot](./img/angular-mat-card.png).
 ![Example screenshot](./img/mat-cards-augury.png).
 
-## Technologies
+## :signal_strength: Technologies
 
-* [Angular v9.1.0](https://angular.io/)
-* [RxJS Library v6.5.4](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
-* [Angular Material v9.1.0](https://material.angular.io/).
+* [Angular v10](https://angular.io/)
+* [RxJS Library v6](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
+* [Angular Material v10](https://material.angular.io/).
 
-## Setup
+## :floppy_disk: Setup
 
-
-* install save-dev @angular-devkit/build-angular
 * Install dependencies using `npm i`
 * Run `ng serve` for a dev server
 * Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
 
-## Code Examples
+## :computer: Code Examples
+
+* service function to get profile data via http request
 
 ```typescript
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-// import { map } from "rxjs/operators";
+export class ProfileService {
+  constructor(private http: HttpClient) {}
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-
-export class AppComponent {
-  myData: any;
-
-  constructor(private http: HttpClient) {
-
-    this.http.get('https://jsonplaceholder.typicode.com/photos')
-      .subscribe(
-        data => {
-          this.myData = data;
-          console.log(data);
-        },
-        error => {
-          alert('ERROR');
-        });
+  getProfileData(): Observable<Profile> {
+    const profileUrl = "https://jsonplaceholder.typicode.com/photos";
+    return this.http.get<Profile>(profileUrl).pipe(
+      map((data: Profile) => data),
+      catchError((err) => {
+        return throwError(
+          "Problem fetching profile data from API, error: ",
+          err
+        );
+      })
+    );
   }
 }
 
 ```
 
-## Features
+## :cool: Features
 
 * Angular Material cards used to show api data.
-* Updated to use latest Angular 9.
+* Updated to use latest Angular 10.
 
-## Status & To-Do List
+## :clipboard: Status & To-Do List
 
 * Status: Working.
 * To-Do: add functionality.
 
-## Inspiration
+## :clap: Inspiration
 
 * [original Angular 4 Material Tutorial by Gary Simon](https://coursetro.com/posts/code/67/Angular-4-Material-Tutorial).
 
-## Contact
+## :envelope: Contact
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)

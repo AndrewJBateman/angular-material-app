@@ -1,26 +1,20 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-// import { map } from "rxjs/operators";
+import { Component } from "@angular/core";
+
+import { ProfileService } from "./services/profile.service";
+import { Profile } from "./models/profile";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
-
 export class AppComponent {
-  myData: any;
+  myData: Profile;
 
-  constructor(private http: HttpClient) {
-
-    this.http.get('https://jsonplaceholder.typicode.com/photos')
-      .subscribe(
-        data => {
-          this.myData = data;
-          console.log(data);
-        },
-        error => {
-          alert('ERROR');
-        });
+  constructor(private profileService: ProfileService) {
+    this.profileService.getProfileData().subscribe((response) => {
+      this.myData = response;
+      console.log(this.myData)
+    });
   }
 }
