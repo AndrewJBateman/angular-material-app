@@ -15,7 +15,7 @@ export class ProfileService {
     const profileUrl = "https://jsonplaceholder.typicode.com/photos";
     return this.http.get<any>(profileUrl).pipe(
       // map((data: Profile) => data),
-      map((data => data.filter(item => item.id < 10))),
+      map((data) => data.filter((item) => item.id < 10)),
       catchError((err) => {
         return throwError(
           "Problem fetching profile data from API, error: ",

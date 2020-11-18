@@ -14,7 +14,7 @@ export class AppComponent {
   constructor(private profileService: ProfileService) {
     this.profileService.getProfileData().subscribe((response) => {
       this.myData = response;
-      console.log(this.myData)
+      console.log(this.myData);
     });
   }
 }

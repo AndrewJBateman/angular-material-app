@@ -1,6 +1,6 @@
 # :zap: Angular Material App
 
-This app integrates Google's Material Design into an Angular 10 app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.
+This app integrates Google's Material Design into an Angular 11 app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -21,7 +21,8 @@ This app integrates Google's Material Design into an Angular 10 app. It displays
 ## :books: General info
 
 * A Gary Simon tutorial was followed (based on Angular 4) but the app.module.ts, app.component.ts and app.component.html required changes due to changes in Angular 7/8.
-* Updated to Angular 10 and http request moved to its own service file.
+* Updated to Angular 11.
+* Http request moved to its own service file.
 * Materials modules begin with 'mat' and not 'md'; md has been deprecated.
 * rxjs pipe - map - filter used to limit http response to 10 items using item id - max 5000 items available which takes a while to download.
 * [A jsonplaceholder API](https://jsonplaceholder.typicode.com/photos) was used to provide dummy json data for the app.
@@ -33,9 +34,9 @@ This app integrates Google's Material Design into an Angular 10 app. It displays
 
 ## :signal_strength: Technologies
 
-* [Angular v10](https://angular.io/)
+* [Angular v11](https://angular.io/)
 * [RxJS Library v6](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
-* [Angular Material v10](https://material.angular.io/).
+* [Angular Material v11](https://material.angular.io/).
 
 ## :floppy_disk: Setup
 
@@ -70,7 +71,6 @@ export class ProfileService {
 ## :cool: Features
 
 * Angular Material cards used to show api data.
-* Updated to use latest Angular 10.
 
 ## :clipboard: Status & To-Do List
 
