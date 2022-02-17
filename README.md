@@ -20,6 +20,7 @@ This app integrates Google's Material Design into an Angular app. It displays a 
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -28,6 +29,7 @@ This app integrates Google's Material Design into an Angular app. It displays a 
 * Http request moved to its own service file.
 * Materials modules begin with 'mat' and not 'md'; md has been deprecated.
 * rxjs pipe - map - filter used to limit http response to 10 items using item id - max 5000 items available which takes a while to download.
+* rxjs throwError method updated
 * [A jsonplaceholder API](https://jsonplaceholder.typicode.com/photos) was used to provide dummy json data for the app.
 
 ## :camera: Screenshots
@@ -37,9 +39,9 @@ This app integrates Google's Material Design into an Angular app. It displays a 
 
 ## :signal_strength: Technologies
 
-* [Angular v12](https://angular.io/)
-* [RxJS Library v6](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
-* [Angular Material v12](https://material.angular.io/).
+* [Angular v13](https://angular.io/)
+* [RxJS Library v7](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
+* [Angular Material v13](https://material.angular.io/).
 
 ## :floppy_disk: Setup
 
@@ -76,8 +78,8 @@ export class ProfileService {
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working. Updated may 2021.
-* To-Do: add functionality.
+* Status: Working.
+* To-Do: Nothing.
 
 ## :clap: Inspiration
 
