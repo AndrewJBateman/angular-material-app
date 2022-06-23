@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Observable } from "rxjs";
 
 import { ProfileService } from "./services/profile.service";
 import { Profile } from "./models/profile";
@@ -9,12 +10,13 @@ import { Profile } from "./models/profile";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  myData: Profile;
+  myData$: Observable<Profile>;
 
   constructor(private profileService: ProfileService) {
-    this.profileService.getProfileData().subscribe((response) => {
-      this.myData = response;
-      console.log(this.myData);
-    });
+    this.myData$ = this.profileService.getProfileData();
+  }
+
+  trackByFn(index: number, item: any): number {
+    return item.id;
   }
 }
