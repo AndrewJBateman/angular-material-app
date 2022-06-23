@@ -1,6 +1,6 @@
 # :zap: Angular Material App
 
-This app integrates Google's Material Design into an Angular app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.
+* This app integrates Google's Material Design into an Angular app. It displays a series of coloured cards from a public API. The number of cards is limited to 10 using a splice function, but there are 500 of these cards available, all with titles, numbers etc.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-app?style=plastic)
@@ -25,8 +25,8 @@ This app integrates Google's Material Design into an Angular app. It displays a 
 
 ## :books: General info
 
-* A Gary Simon tutorial was followed (based on Angular 4) but the app.module.ts, app.component.ts and app.component.html required changes due to changes in Angular 7/8.
-* Http request moved to its own service file.
+* Gary Simon tutorial (based on Angular 4) but the app.module.ts, app.component.ts and app.component.html required changes due to changes in Angular 7/8, currently Angular v14
+* HTTP request moved to its own service file.
 * Materials modules begin with 'mat' and not 'md'; md has been deprecated.
 * rxjs pipe - map - filter used to limit http response to 10 items using item id - max 5000 items available which takes a while to download.
 * rxjs throwError method updated
@@ -39,9 +39,9 @@ This app integrates Google's Material Design into an Angular app. It displays a 
 
 ## :signal_strength: Technologies
 
-* [Angular v13](https://angular.io/)
+* [Angular v14](https://angular.io/)
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
-* [Angular Material v13](https://material.angular.io/).
+* [Angular Material v14](https://material.angular.io/).
 
 ## :floppy_disk: Setup
 
@@ -74,7 +74,7 @@ export class ProfileService {
 
 ## :cool: Features
 
-* Angular Material cards used to show api data.
+* Angular Material cards used to show API data.
 
 ## :clipboard: Status & To-Do List
 
@@ -83,7 +83,7 @@ export class ProfileService {
 
 ## :clap: Inspiration
 
-* [original Angular 4 Material Tutorial by Gary Simon](https://coursetro.com/posts/code/67/Angular-4-Material-Tutorial).
+* [Gary Simon](https://www.youtube.com/c/DesignCourse) tutorial on Youtube - no longer available
 
 ## :file_folder: License
 
