@@ -25,7 +25,7 @@
 
 ## :books: General info
 
-* Gary Simon tutorial (based on Angular 4) but the app.module.ts, app.component.ts and app.component.html required changes due to changes in Angular 7/8, currently Angular v14
+* Gary Simon tutorial (based on Angular 4) but the app.module.ts, app.component.ts and app.component.html required changes due to changes in Angular 7/8.
 * HTTP request moved to its own service file.
 * Materials modules begin with 'mat' and not 'md'; md has been deprecated.
 * rxjs pipe - map - filter used to limit http response to 10 items using item id - max 5000 items available which takes a while to download.
@@ -39,9 +39,9 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v14](https://angular.io/)
+* [Angular v15](https://angular.io/)
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to handle datastreams and propagation of change using observables.
-* [Angular Material v14](https://material.angular.io/).
+* [Angular Material v15](https://material.angular.io/).
 
 ## :floppy_disk: Setup
 
