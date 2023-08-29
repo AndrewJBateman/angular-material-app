@@ -1,3 +1,7 @@
 .example-spacer {
   width: 20%;
 }
+
+.toolbar-text {
+  font-size: 20px;
+}
